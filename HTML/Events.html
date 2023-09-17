@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+        function gettip(txt)
+        {
+        document.getElementById('tip').innerHTML=txt;
+        }
+       
+        function reset()
+        {
+        document.getElementById('tip').innerHTML="";
+        }
+        </script>
+        </head>
+       
+        <body>
+        <p>Mouse over these drinks:</p>
+       
+        <span onmouseover="gettip('Hot black drink')"
+        onmouseout="reset()">Coffee</span>
+        <br /><br />
+        <span onmouseover="gettip('Cold white drink')"
+        onmouseout="reset()">Milk</span>
+       
+        <p id="tip"></p>
+        </body>
+        </html>
+        <html>
+        <head>
+        <style>
+        a:hover
+        {
+        text-transform:uppercase;
+        }
+        </style>
+        </head>
+       
+        <body>
+        <a href="button.html">Mouse over this link</a>
+        </body>
+        </html>

@@ -1,0 +1,54 @@
+<!DOCTYPEhtml>
+<html lang="en">
+<head>
+
+<title>Customer Profile</title>
+<script>
+function show(){
+
+localStorage.setItem("fn", document.getElementById("txtFirstName").value);
+localStorage.setItem("ln", document.getElementById("txtLastName").value);
+localStorage.setItem("ad", document.getElementById("Address").value);
+localStorage.setItem("ph", document.getElementById("txtphone").value);
+
+alert(localStorage.getItem("fn")+"\n" + localStorage.getItem("ln")+"\n" + localStorage.getItem("ad")+"\n" );
+}
+</script>
+</head>
+<body>
+<section id="contact"class="grad">
+<h1>Customer Profile Form</h1>
+<form>
+<table border=0 cellpadding=4>
+<tr>
+<td style="width:30%;">First Name</td>
+<td style="width:70%;"><input id="txtFirstName" type="text" placeholder="Enter First
+Name" autofocus/></td>
+</tr>
+
+<tr>
+<td style="width:30%;">Last Name</td>
+<td style="width:70%;"><input id="txtLastName" type="text" placeholder="Enter Last
+Name" /></td>
+</tr>
+
+<tr>
+<td style="width:30%;">Address</td>
+<td style="width:70%;"><input id="Address" type="text" placeholder="Enter Adress
+Name" /></td>
+</tr>
+
+<tr>
+<td style="width:30%;">Contact number</td>
+<td style="width:70%;"><input id="txtphone" type="text" placeholder="Enter Contact Number "/></td>
+</tr>
+
+<tr>
+<td style="width:100%; text-align: center;" colspan="2"><input id="Submit" type="submit" value="SubmitProfile" onclick="show()"/></td>
+</tr>
+
+</table>
+</form>
+</section>
+</body>
+</html>

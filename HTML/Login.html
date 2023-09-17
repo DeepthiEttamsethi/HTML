@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Login Page</title>
+<script>
+  const users = [
+    { username: "hari", password: "12345", name: "Hari prasad" },
+    { username: "sweety", password: "12345", name: "sweety" },
+    
+  ];
+
+  
+  function loginUser() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    const user = users.find(u => u.username === username && u.password === password);
+
+    if (user) {
+      document.getElementById("loginForm").style.display = "none";
+      document.getElementById("userInfo").style.display = "block";
+      document.getElementById("userName").textContent = user.name;
+    } else {
+      alert("Invalid username or password. Please try again.");
+    }
+  }
+</script>
+</head>
+<body>
+<div id="loginForm">
+  <h1>Login</h1>
+  <label for="username">Username:</label>
+  <input type="text" id="username" required><br>
+  <label for="password">Password:</label>
+  <input type="password" id="password" required><br>
+  <button onclick="loginUser()">Login</button>
+</div>
+<div id="userInfo" style="display: none;">
+  <h1>Welcome, <span id="userName"></span>!</h1>
+  <!-- Display user details here -->
+</div>
+</body>
+</html>

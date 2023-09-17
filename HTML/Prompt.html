@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+    function show_prompt() {
+        var name = prompt("Please enter your name", "");
+        if (name != null && name !== "") {
+            document.write("Hello " + name + "! Welcome to the Demo Page");
+            document.write("<br>");
+        }
+        
+        var dayResponse = prompt("How was your day?");
+        if (dayResponse != null && dayResponse !== "") {
+            document.write("Hmmm, " + dayResponse);
+            document.write("<br>");
+        }
+        
+        var lifeResponse = prompt("How is your life going?");
+        if (lifeResponse != null && lifeResponse !== "") {
+            document.write("Hmmm, " + lifeResponse);
+        } else {
+            alert("Please enter the fields. Fields cannot be left empty.");
+        }
+    }
+    </script>
+</head>
+<body>
+    <input type="button" onclick="show_prompt()" value="Show prompt box" />
+</body>
+</html>

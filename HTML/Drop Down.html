@@ -1,0 +1,43 @@
+<select>
+    <option> value1 </option>
+    .....
+    </option> valueN </option>
+    </select>
+    
+    
+    <html>
+    <head>
+    
+    <script type="text/javascript">
+    function bgChange(bg)
+    {
+    document.body.style.background=bg;
+    }
+    </script>
+    </head>
+    
+    <body>
+    <p align="center">
+    <b>Mouse over the squares and the background color will change!</b></p>
+    <div align="center">
+    <table width="300" height="100">
+     <tr>
+      <td onmouseover="bgChange('pink')" 
+       onmouseout="bgChange('transparent')"   
+          bgcolor="pink">
+      </td>
+      <td onmouseover="bgChange('blue')" 
+          onmouseout="bgChange('transparent')"
+          bgcolor="blue">
+      </td>
+      <td onmouseover="bgChange('green')" 
+          onmouseout="bgChange('transparent')"
+          bgcolor="green">
+      
+    </td>
+    </tr>
+    </table>
+    </div>
+    </body>
+    </html>
+    

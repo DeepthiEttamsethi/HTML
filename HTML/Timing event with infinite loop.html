@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        var c = 0; // Corrected the variable name from "varcc" to "c"
+        var t;
+        var timer_is_on = 0;
+
+        function timedCount() {
+            document.getElementById('txt').value = c;
+            c = c + 1;
+            t = setTimeout("timedCount()", 1000);
+        }
+
+        function doTimer() {
+            if (!timer_is_on) {
+                timer_is_on = 1;
+                timedCount();
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="button" value="Start count!" onclick="doTimer();"> <!-- Corrected the attribute name from "values" to "value" and added semicolon -->
+        <input type="text" id="txt">
+    </form>
+    <p>Click on the button above. The input field will count forever, starting at 0.</p> <!-- Corrected some typos in the text -->
+</body>
+</html>

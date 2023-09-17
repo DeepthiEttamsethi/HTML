@@ -1,0 +1,89 @@
+<html>
+<head>
+<style type="text/css">
+p.dotted {border-style: dotted}
+p.dashed {border-style: dashed}
+p.solid {border-style: solid}
+p.double {border-style: double}
+p.groove {border-style: groove}
+p.ridge {border-style: ridge}
+p.inset {border-style: inset}
+p.outset {border-style: outset}
+</style>
+</head>
+<body>
+<p class="dotted">A dotted border</p>
+<p class="dashed">A dashed border</p>
+<p class="solid">A solid border</p>
+<p class="double">A double border</p>
+<p class="groove">A groove border</p>
+<p class="ridge">A ridge border</p>
+<p class="inset">An inset border</p>
+<p class="outset">An outset border</p>
+</body>
+</html>
+
+<!doctype HTML PUBLIC "-//IEFF/DTD HTML 4.0//EN">
+<html>
+<head>
+<title>Travelling in the Backcountry</title>
+<style type="text/css">
+<!--
+BODY {background-color:rgb(255,255,255); color:rgb(0,0,0);
+font-family:bookman Old style,serif}
+H1, H2, H3 {font-family:Tahoma,sans-serif;font-weight:bold;font-style:italic; font-variant:small-caps}
+H2 {margin-left:2-px}
+H3 {margin - left:60px}
+.H2 {MARGIN-LEFT:60PX }
+.h3 {MARGIN-LEFT:100PX}
+BLOCKQUOTE {font-family:Times New Roman, serif;font-style:italic}
+.cite {text-align:right}
+-->
+</style>
+</head>
+<script language="JavaScript">
+<!--
+currentDiv=0;
+
+function initDisplay()
+{
+   divColl=document.all.tags("DIV");
+   if(divColl!=null)
+   {
+   for(i=0;i<divColl.length;i++)
+    {
+       divColl[i].style.display="none";
+    }
+   }
+   showDiv(currentDiv);
+}
+
+
+function showDiv(aNum)
+{
+   setDisplay(nameDiv(currentDiv),"none");
+   setDisplay(nameDiv(aNum)," ");
+   currentDiv=aNum;
+}
+function nameDiv(aNum)
+{
+   name="div_"+aNum;
+   return name;
+}
+function setDisplay(anId,aValue)
+{
+   document.all(anId).style.display=aValue;
+}
+//-->
+</script>
+<body onLoad="initDisplay()">
+<h1>Traveling in the Backcountry</h1>
+
+<blockquote>
+<p class="cite">Ernest Thompson Seton, 1906</p>
+
+</blockquote>
+</div>
+</body>
+</html>
+

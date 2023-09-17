@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#div1 {
+width: 450px;
+height: 200px;
+padding: 10px;
+border: 1px solid #aaaaaa;
+}
+</style>
+<script>
+function allowDrop(ev) {
+ev.preventDefault();
+}
+function drag(ev) {
+ev.dataTransfer.setData("text", ev.target.id);
+}
+function drop(ev) {
+ev.preventDefault();
+var data = ev.dataTransfer.getData("text");
+ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+<p>Drag the anudip image into the rectangle:</p>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="drag1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH0AAAB9CAMAAAC4XpwXAAAAmVBMVEULsbH///8Arq4jHyAApqU9ublVu7wAqqqAy8sksrPk8/T2+/qE0dHU7O37/f0xtrbv+fklAAAjGhum19kAAACt3t7P7e2u2tsIt7e65OLd8vLH6OkApKYfREVpw8Kj29scTk4dKiq5xcUgOzy/vr6Q0tISkZEVgH8hAAAvKisbaGoQAACFfn4AWFhgpKMTiYcjEBIXdXQcV1luD46ZAAAEHUlEQVRoge2Xa5eiOBCGY0EIqBC1ByTAJOP2or29l3Hn//+4rVy8tDpi65zjh623T2uIRR4qqRQVxkgkEolEIpFIJBKJRCKRSCQS6apqETOAJ8Hjb6vfZmMjngKH1y+/j1D9U7xfv32x8NH4GfB68/aHo0+yZ+C7ufc9f07cvf/5F8IL/hx6vf77H2OeBGc16r7tDvBomqi776hNdw88RT0GX0fb7Xy1tl581o+4wHh5aMW6xSJavAqmyzT7NH3yGD2rXxE+B1B2y8lPDvQovd7Mo2i7qaG/Z8c/SmcRalUzJkqLN24k2Mvb7FsnfdAFeug+uW1QmGWj6G2DdJbZCJrYG/k0KNUuDsG2bRYGjQ3txhY6tb0h6mxbejt3X3LbA9TfFui722ywtM6n6Eg62mtmWZ1tyZ2Jwh7g1cGGQzbDr4TF+66i0bfguwhj7mvt2tzep8QHuvPM0gtHfwkWcvbBIhuf0L0bg65/tzH3r6e7m4vY0ydN07hR2gt00TrT8aw5p+dNM3GzNvzCrN+3UTTvPF242WSenndCxMaOIt2oR3RgiR1/ihYh6o7pHO/jk5ucd5t9FfsLsLCRBk+3ZZbEUWaciRM6aFuK2MHFOT2xdnb/lIN0sYpw2cOF3/LTYzou74Sf+F4Gg2t0G53tYJnYYcAvftSBbl0aLW+gT308XKdXg/S1Dbr3HT0ZHbl2RD9E3dIb9EP0l5voNtdsN4HOeOGXdZBufa8ennkf8uvdpbxG5yxk4+N1j6/QB6MubLj9deFm9IwubG7pBQiRu7BkSWEfRwBcoHNM86LxdgP0H0h/O8zQz+jW5aKXiU0yBToHljbr0zQ5p5s07fNgN0THLD/fP2NduPU8ozN5lEFL/EGc5OJLmVYNBh36vlgc6HCJbhcc+D6v+9UU/RB9GI7r/hV1WJ8qz3ODqSyvqtLR2zyvXLCzaYsJPFfJ7u0ul5VTnjcSMoVfPi+MGhwjb5NbXnHw8dwM4fpSXSEgfBz/ALtS1Fn5mLd94qbX+69VfFOwEf2CwP8fFu1CeXa5YnOd3S7X3ScbMRqy/dmIa81PbfjFqsHFuGirqj274VbV+GIALYzenam4KaVtZxDmJAOhEhHmJ1TRLvBbV6EI1L1wVmPRJAxrtFClOyKATkEr3ZcGUqOYNCblY87blks11WVZKgnYJ3rTxHdTD3RbMMYtpEtT7ui9FpAo3idJn7RaMBUrwAUxXZ/wF95zlVas7IYLmWH6sgOkKzwXZ9IlE41+aVCydXQhUwVIZ0h/wcdCtkmM4EivfkF+aUsTl6LEhuIZHqrQSZgm0C+NnPIklQpDAmlKcd5DmvAUv8oSn3CpYvPwRofw5z7c0enjsQ6jzlvszEJIYmp92HMSiUQikUgkEolEIpFIJBKJ9P/Rf7kWRBloBN7sAAAAAElFTkSuQmCC" draggable="true" ondragstart="drag(event)" width="300" height="150">
+</body>
+</html>

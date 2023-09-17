@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #e6adad;
+  }
+ 
+  .rotated-square {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    position: relative;
+    transform: rotate(45deg);
+  }
+ 

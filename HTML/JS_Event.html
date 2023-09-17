@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS Event Page</title>
+  <script>
+    function fun1()
+    {
+        var name=prompt("Enter Your Name");
+        alert("Welcome to JS"+name);
+        document.getElementById("header").innerHTML="Welcome to JS "+ name;
+
+    }
+  </script>
+</head>
+<body>
+  <input type="button" value="click" id="btn1" onclick="fun1()"/>
+  <h1 id="header"> Welcome </h1>
+</body>
+</html>

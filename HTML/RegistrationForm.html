@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<center></center>
+<title>Registration Form</title>
+<style>
+
+body { font-family: Arial, sans-serif; 
+    background-color: yellowgreen; 
+    margin: 0; 
+    padding: 0; 
+}
+h1 {
+     text-align: center; 
+     padding: 20px 0;
+ } 
+form { background-color: pink; 
+    padding: 20px; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px orange; 
+    max-width: 600px; 
+    margin: 0 auto; 
+    border: 2px solid yellow; }
+    
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    border: 1px solid purple;
+    padding: 8px;
+    text-align: left;
+  }
+</style>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form id="registrationForm">
+  <label for="firstname">Firstname:</label>
+  <input type="text" id="firstname" name="firstname" required><br><br>
+
+  <label for="lastname">Lastname:</label>
+  <input type="text" id="lastname" name="lastname" required><br><br>
+
+  <label for="mobile">Mobile number:</label>
+  <input type="text" id="mobile" name="mobile" required><br><br>
+
+  <label for="email">Email Id:</label>
+  <input type="email" id="email" name="email" required><br><br>
+
+  <label for="qualification">Qualification:</label>
+  <select id="qualification" name="qualification">
+    <option value="BE">BE</option>
+    <option value="MSc">MSc</option>
+    <option value="BTech">BTech</option>
+    <option value="BSc">BSc</option>
+    <option value="BCA">BCA</option>
+  </select><br><br>
+
+  <label for="year">Year of Completion:</label>
+  <select id="year" name="year">
+    <option value="2023">2023</option>
+    <option value="2022">2022</option>
+    <option value="2021">2021</option>
+    <option value="2020">2020</option>
+  </select><br><br>
+
+  <label for="skills">Technical Skills:</label>
+  <select id="skills" name="skills" multiple>
+    <option value="Web designing">Web designing</option>
+    <option value="Core Java">Core Java</option>
+    <option value="Mysql">Mysql</option>
+    <option value="Spring">Spring</option>
+    <option value="Spring Boot with REST API">Spring Boot with REST API</option>
+    <option value="JavaScript">JavaScript</option>
+  </select><br><br>
+
+  <label for="relocation">Interested in Relocation:</label>
+  <input type="radio" id="relocationYes" name="relocation" value="Yes">Yes
+  <input type="radio" id="relocationNo" name="relocation" value="No">No<br><br>
+
+  <input type="button" value="Submit" onclick="submitForm()">
+  <input type="reset" value="Reset">
+</form>
+
+<br><br>
+
+<table id="displayTable">
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Mobile number</th>
+      <th>Email Id</th>
+      <th>Qualification</th>
+      <th>Year of Completion</th>
+      <th>Technical Skills</th>
+      <th>Interested in Relocation</th>
+    </tr>
+  </thead>
+  <tbody id="tableBody">
+  </tbody>
+</table>
+
+<script>
+function submitForm() {
+  const firstname = document.getElementById("firstname").value;
+  const lastname = document.getElementById("lastname").value;
+  const mobile = document.getElementById("mobile").value;
+  const email = document.getElementById("email").value;
+  const qualification = document.getElementById("qualification").value;
+  const year = document.getElementById("year").value;
+  const skills = Array.from(document.getElementById("skills").selectedOptions).map(option => option.value);
+  const relocation = document.querySelector('input[name="relocation"]:checked').value;
+
+  const newRow = document.getElementById("tableBody").insertRow();
+  newRow.insertCell().textContent = firstname;
+  newRow.insertCell().textContent = lastname;
+  newRow.insertCell().textContent = mobile;
+  newRow.insertCell().textContent = email;
+  newRow.insertCell().textContent = qualification;
+  newRow.insertCell().textContent = year;
+  newRow.insertCell().textContent = skills.join(', ');
+  newRow.insertCell().textContent = relocation;
+}
+</script>
+
+</body>
+</html>

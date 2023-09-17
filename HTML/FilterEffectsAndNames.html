@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .image-container {
+    margin: 20px;
+    text-align: center;
+  }
+ .image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .filter-text {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .filter-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+ .filter {
+    margin: 0 10px;
+    cursor: pointer;
+  }
+</style>
+<title>Image Filter Effects</title>
+</head>
+<body>
+  
+  <div class="image-container">
+    <img class="image" src="flower.jpg" alt="Image 2">
+    <p class="filter-text">Deepthi</p>
+  </div>
+ <div class="filter-container">
+    <div class="filter">
+      <img class="image" src="IMG_20230501_WA0001 (18).jpg" alt="Image 1" style="filter: grayscale(100%);">
+      <p class="filter-text">Grayscale</p>
+    </div>
+    
+    <div class="filter">
+      <img class="image" src="IMG_20230501_WA0001 (1).jpg" alt="Image 2" style="filter: sepia(100%);">
+      <p class="filter-text">sepia</p>
+    </div>
+  </div>
+</body>
+</html>

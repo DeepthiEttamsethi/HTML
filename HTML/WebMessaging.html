@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<center>
+
+</head>
+<body>
+<iframe id="frame1" src="./web_messaging_cross_document_messaging_iframe.htm"></iframe>
+<script>
+function sendMessage(message) {
+var frame1 = document.getElementById('frame1');
+frame1.contentWindow.postMessage(message, '*');
+}
+</script>
+Register the message event handler in document B to receive the sent message:
+<script>
+btnSendMessageHandler = function(e) {
+var messageEle = document.getElementById('message');
+sendMessage(messageEle.value);
+};
+/* Register event handler */
+btnSendMessage.onclick = btnSendMessageHandler;
+</script>
+
+</body>
+</html>

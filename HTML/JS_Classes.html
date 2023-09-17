@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        class Student
+        {            
+            constructor(id, name, course, average)
+            {
+            this.idno=id;
+            this.stuname=name;
+            this.course=course;
+            this.avg=average;
+            }
+
+
+            showstudent()
+            {
+               document.write(this.idno+"\n"+this.stuname+"\n"+this.course+"\n"+this.avg);
+            }
+      };
+function fun1()
+{
+    id=document.getElementById("txt1").value;
+    stuname=document.getElementById("txt2").value;
+    course=document.getElementById("txt3").value;
+    avg=document.getElementById("txt4").value;
+    let s = new Student(id, stuname,course,avg); // student object created
+    s.showstudent();
+}
+    </script>
+</head>
+<body>
+  <!-- <script>
+
+
+    let s = new Student(100, "kiran","java",83.55);
+    s.showstudent();
+   </script>
+-->
+
+
+<form>
+    Rollno <input type="text" id="txt1" width="20"/><br>
+    Name <input type="text" id="txt2" width="20"/><br>
+    Course <input type="text" id="txt3" width="20"/><br>
+    Average <input type="text" id="txt4" width="20"/><br>
+    <br>
+    <input type="button" value="showstudent" onclick="fun1()">
+
+
+</form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Employee Details</title>
+    </head>
+    <body bgcolor="blueandpink">
+        <h2>Employee Details</h2>
+        <form id="employeeForm">
+            <label for="idno">ID Number:</label>
+            <input type="text" id="idno" name="idno"><br><br>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="job">Job:</label>
+            <input type="text" id="job" name="job"><br><br>
+            <label for="salary">Salary:</label>
+            <input type="text" id="salary" name="salary"><br><br>
+            <button type="button" onclick="displayEmployee()">Display Employee</button>
+        </form>
+        <h2>Employee Data</h2>
+        <div id="employeeData"></div>
+        <script>
+        class Employee {
+            constructor(idno, name, job, salary) { this.idno = idno;
+                this.name = name; this.job = job; this.salary = salary;
+            }
+        }
+        function displayEmployee() {
+            const idno = document.getElementById("idno").value; const name = document.getElementById("name").value; const job = document.getElementById("job").value; const salary = document.getElementById("salary").value;
+            const employee = new Employee(idno, name, job, salary);
+            const employeeDataDiv = document.getElementById("employeeData"); employeeDataDiv.innerHTML = `
+            <p><strong>ID Number:</strong> ${employee.idno}</p>
+            <p><strong>Name:</strong> ${employee.name}</p>
+            <p><strong>Job:</strong> ${employee.job}</p>
+            <p><strong>Salary:</strong> ${employee.salary}</p>`;
+            
+        }
+        </script>
+    </body>
+</html>
